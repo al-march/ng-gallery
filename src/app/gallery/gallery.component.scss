@@ -1,3 +1,4 @@
+@import 'vars';
 $gutter: 2rem;
 
 .gallery {
@@ -7,6 +8,46 @@ $gutter: 2rem;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: $gutter
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+        transition: .4s ease all;
+        overflow: hidden;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            transition: inherit;
+        }
+        &:hover {
+            &:before {
+                background-color: #000;
+                opacity: 0.8;
+            }
+            .gallery__title {
+                transform: translateY(0)
+            }
+        }
+    }
+
+    &__title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        transition: inherit;
+        @include flex(row, center, center);
+        transform: translateY(50%)
     }
 
     &__img {
