@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
-import { LiteboxComponent } from './litebox/litebox.component';
+import { LiteboxComponent } from './gallery/litebox/litebox.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
