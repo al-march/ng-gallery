@@ -9,11 +9,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class LiteboxComponent implements OnInit {
 
   @Input() item;
-  @Output() close = new EventEmitter;
+  @Output() closeLitebox = new EventEmitter;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  close (event) {
+    const { target } = event;
+    if (target.matches('.litebox')) {
+      this.closeLitebox.emit()
+    }
   }
 
 }

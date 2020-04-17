@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GALLERY_ITEMS } from '@app/mock';
+import { GalleryItem } from '@app/gallery';
 
 
 @Component({
@@ -10,9 +11,9 @@ import { GALLERY_ITEMS } from '@app/mock';
 export class GalleryComponent implements OnInit {
 
   showLitebox: boolean = false;
-  currentImg;
 
-  galleryItems = GALLERY_ITEMS;
+  galleryItems: GalleryItem[] = GALLERY_ITEMS;
+  currentImg: GalleryItem;
 
 
   constructor() { }
@@ -20,13 +21,14 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   toggleLitebox = () => this.showLitebox = !this.showLitebox;
 
   openLitebox(galleryItem) {
     this.currentImg = galleryItem;
-    this.showLitebox = true
+    this.showLitebox = true;
   }
+
+  closeLitebox = () => this.showLitebox = false;
 
 
 }
