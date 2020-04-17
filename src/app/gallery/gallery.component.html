@@ -1,5 +1,5 @@
-<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
-
-    <app-gallery-item *ngFor="let item of items"></app-gallery-item>
-
+<div class="gallery">
+    <div class="gallery__grid">
+        <app-gallery-item *ngFor="let item of galleryItems" [item]="item"></app-gallery-item>
+    </div>
 </div>

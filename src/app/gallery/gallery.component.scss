@@ -1,0 +1,15 @@
+$gutter: 2rem;
+
+.gallery {
+    margin: 3rem auto;
+    padding: 0 $gutter;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: $gutter
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
