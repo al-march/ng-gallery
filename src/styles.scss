@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'vars';
+
+body {
+    background: $gradient;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+input, textarea {
+    font-family: inherit;
+}
