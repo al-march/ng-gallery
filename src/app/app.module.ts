@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
+import { LiteboxComponent } from './litebox/litebox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     GalleryComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    LiteboxComponent
   ],
   imports: [
     BrowserModule,
