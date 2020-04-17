@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GALLERY_ITEMS } from '@app/mock';
-import { GalleryItem } from '@app/gallery';
-import { GalleryService } from '@app/gallery.service';
+import { GalleryItem } from '@app/gallery/gallery';
+import { GalleryService } from '@app/gallery/gallery.service';
 
 
 @Component({
@@ -20,11 +19,7 @@ export class GalleryComponent implements OnInit {
   constructor(private service: GalleryService) { }
 
   ngOnInit(): void {
-    this.service.getGallery().subscribe(gallery => {
-      console.log(gallery);
-      
-      this.galleryItems = gallery
-    })
+    this.service.getGallery().subscribe(gallery => this.galleryItems = gallery)
   }
 
   public toggleLitebox = () => this.showLitebox = !this.showLitebox;

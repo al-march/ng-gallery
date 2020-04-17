@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { GalleryItem } from '@app/gallery';
+import { GalleryItem } from '@app/gallery/gallery';
 
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { GalleryService } from '@app/gallery.service';
+import { GalleryService } from '@app/gallery/gallery.service';
 
 @Component({
   selector: 'app-litebox',

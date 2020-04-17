@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GalleryItem } from './gallery';
 
-import { GALLERY_ITEMS } from './mock';
+import { GALLERY_ITEMS } from '../mock';
 import { ReplaySubject, Subject, Observable, of } from 'rxjs';
 
 @Injectable({
@@ -24,7 +24,8 @@ export class GalleryService {
     const likedIndex = this.gallery.findIndex(item => item.id === id);
     this.gallery[likedIndex].isLiked = !this.gallery[likedIndex].isLiked;
 
-    this.gallery[likedIndex].likes += this.gallery[likedIndex].isLiked ? 1 : -1
+    this.gallery[likedIndex].likes += this.gallery[likedIndex].isLiked ? 1 : -1;
+    this.saveState()
   }
 
   saveState() {
