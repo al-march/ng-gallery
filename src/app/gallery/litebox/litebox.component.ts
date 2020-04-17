@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { GalleryItem } from '@app/gallery/gallery';
 
-import { faHeart, faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faArrowLeft, faArrowRight, faComments } from "@fortawesome/free-solid-svg-icons";
 import { GalleryService } from '@app/gallery/gallery.service';
 
 @Component({
@@ -19,6 +19,7 @@ export class LiteboxComponent implements OnInit {
   showComments = false;
 
   faHeart = faHeart;
+  faComments = faComments;
   arrowLeft = faArrowLeft;
   arrowRight = faArrowRight;
 
@@ -36,8 +37,8 @@ export class LiteboxComponent implements OnInit {
     }
   }
 
-  toggleLike() {
-    this.service.toggleLike(this.item.id)
-  }
+  toggleLike = () => this.service.toggleLike(this.item.id);
+
+  showCommentsIcon = () => this.item.comments.length;
 
 }

@@ -3,9 +3,14 @@
         <img class="litebox__img" [src]="item.src" alt="">
 
         <div class="litebox__info">
-            <div class="litebox__likes">
+            <div class="litebox__info-item">
                 <fa-icon class="litebox__icon-like liked" [ngClass]="{liked: item.isLiked}" [icon]="faHeart" (click)="toggleLike()"></fa-icon>
-                {{item.likes}}
+                <span>{{item.likes}}</span>
+            </div>
+
+            <div class="litebox__info-item" *ngIf="showCommentsIcon()">
+                <fa-icon class="litebox__icon-comment" [icon]="faComments"></fa-icon>
+                <span>{{item.comments.length}}</span>
             </div>
 
         </div>

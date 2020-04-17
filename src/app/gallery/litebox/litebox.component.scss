@@ -9,6 +9,10 @@
 
     @include flex(row, center, center);
 
+    &__img {
+        width: 100%;
+    }
+
     &__wrapper {
         padding: 15px;
         max-width: 400px;
@@ -19,6 +23,19 @@
         
         @include flex(column, center, center)
     }
+
+    &__info {
+        width: 100%;
+        padding: 8px 0;
+        @include flex(row, $item: center);
+
+        &-item {
+            & + & {
+                margin-left: 10px;
+            }
+        }
+    }
+
 
     &__comment {
         padding: 5px;
@@ -37,11 +54,18 @@
         &-like {
             color: #ddd;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 18px;
+            margin-right: 4px;
 
             &.liked {
                 color: red;
             }
+        }
+        &-comment {
+            color: #ddd;
+            cursor: pointer;
+            font-size: 18px;
+            margin-right: 4px;
         }
     }
 
