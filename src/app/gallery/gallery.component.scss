@@ -30,23 +30,39 @@ $gutter: 2rem;
                 background-color: #000;
                 opacity: 0.8;
             }
-            .gallery__title {
+            .gallery__description {
                 bottom: 50%;
                 transform: translateY(50%);
             }
         }
     }
 
-    &__title {
+    &__description {
         position: absolute;
         left: 0;
         right: 0;
         text-align: center;
-        color: #fff;
-        font-weight: 500;
         transition: inherit;
-        @include flex(row, center, center);
+        @include flex(column, center, center);
         bottom: 20px;
+        color: #fff;
+    }
+    &__title {
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+
+    &__info {
+        @include flex(row, center, center);
+
+        .likes {
+            margin: 0 8px;
+        }
+
+        .liked {
+            color: red;
+        }
     }
 
     &__img {

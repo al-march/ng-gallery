@@ -1,4 +1,16 @@
 <div class="gallery__item">
-    <h3 class="gallery__title">{{item.title}}</h3>
+    <div class="gallery__description">
+        <h3 class="gallery__title">{{item.title}}</h3>
+        <div class="gallery__info">
+            <div class="likes">
+                <fa-icon [ngClass]="{liked: item.isLiked}" [icon]="faHeart"></fa-icon>
+                {{item.likes}}
+            </div>
+            <div class="comments" *ngIf="showComments()">
+                <fa-icon [icon]="faComments"></fa-icon>
+                {{ showComments() }}
+            </div>
+        </div>
+    </div>
     <img class="gallery__img" [src]="item.src" alt="">
 </div>
