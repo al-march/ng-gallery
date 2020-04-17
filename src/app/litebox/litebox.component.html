@@ -1,3 +1,20 @@
 <div class="litebox" (click)="close($event)">
-    <img [src]="item.src" alt="">
+    <div class="litebox__wrapper">
+        <img class="litebox__img" [src]="item.src" alt="">
+
+        <div class="litebox__info">
+            <div class="litebox__likes">
+                <fa-icon class="litebox__icon-like liked" [ngClass]="{liked: item.isLiked}" [icon]="faHeart" (click)="toggleLike()"></fa-icon>
+                {{item.likes}}
+            </div>
+
+        </div>
+
+        <div class="litebox__content" *ngIf="showComments">
+            <div class="litebox__comment" *ngFor="let comment of item.comments">
+                <h3 class="autor">{{comment.autor}}</h3>
+                <p class="comment">{{comment.value}}</p>
+            </div>
+        </div>
+    </div>
 </div>
