@@ -11,7 +11,13 @@
 
     &__wrapper {
         padding: 15px;
+        max-width: 400px;
+        box-sizing: border-box;
         background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        
+        @include flex(column, center, center)
     }
 
     &__comment {
@@ -37,5 +43,25 @@
                 color: red;
             }
         }
+    }
+
+
+    &__control {
+        position: absolute;
+        left: -8px;
+        right: -8px;
+        top: 50%;
+        @include flex(row, space-between)
+    }
+
+    &__btn {
+        background-color: #fff;
+        height: 45px;
+        width: 45px;
+        border-radius: 100%;
+        border: none;
+        font-size: 16px;
+        outline: none;
+        cursor: pointer;
     }
 }

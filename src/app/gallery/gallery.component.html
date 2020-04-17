@@ -5,4 +5,10 @@
 </div>
 
 
-<app-litebox *ngIf="showLitebox" [item]="currentImg" (closeLitebox)="closeLitebox()"></app-litebox>
+<app-litebox 
+    *ngIf="showLitebox" 
+    [item]="currentItem" 
+    (closeLitebox)="closeLitebox()"
+    (nextItem)="showNextItem()"
+    (prevItem)="showPrevItem()">
+</app-litebox>

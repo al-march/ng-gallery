@@ -16,5 +16,15 @@
                 <p class="comment">{{comment.value}}</p>
             </div>
         </div>
+
+        <div class="litebox__control">
+            <button type="button" class="litebox__btn left" (click)="prevItem.emit()">
+                <fa-icon [icon]="arrowLeft"></fa-icon>
+            </button>
+            <button type="button" class="litebox__btn right" (click)="nextItem.emit()">
+                <fa-icon [icon]="arrowRight"></fa-icon>
+            </button>
+        </div>
+
     </div>
 </div>

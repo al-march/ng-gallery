@@ -13,7 +13,7 @@ export class GalleryComponent implements OnInit {
   public showLitebox: boolean = false;
 
   public galleryItems: GalleryItem[];;
-  public currentImg: GalleryItem;
+  public currentItem: GalleryItem;
 
 
   constructor(private service: GalleryService) { }
@@ -25,11 +25,26 @@ export class GalleryComponent implements OnInit {
   public toggleLitebox = () => this.showLitebox = !this.showLitebox;
 
   public openLitebox(galleryItem) {
-    this.currentImg = galleryItem;
+    this.currentItem = galleryItem;
     this.showLitebox = true;
   }
 
   public closeLitebox = () => this.showLitebox = false;
 
+  showNextItem() {
+    const { length } = this.galleryItems;
+    const currentIndex = this.galleryItems.findIndex(item => item.id === this.currentItem.id);
+    this.currentItem = (currentIndex === length - 1)
+      ? this.galleryItems[0]
+      : this.galleryItems[currentIndex + 1]
+  }
+
+  showPrevItem() {
+    const { length } = this.galleryItems;
+    const currentIndex = this.galleryItems.findIndex(item => item.id === this.currentItem.id);
+    this.currentItem = (currentIndex === 0)
+      ? this.galleryItems[length - 1]
+      : this.galleryItems[currentIndex - 1]
+  }
 
 }

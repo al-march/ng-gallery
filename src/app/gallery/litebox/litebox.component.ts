@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { GalleryItem } from '@app/gallery/gallery';
 
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { GalleryService } from '@app/gallery/gallery.service';
 
 @Component({
@@ -13,10 +13,14 @@ export class LiteboxComponent implements OnInit {
 
   @Input() item: GalleryItem;
   @Output() closeLitebox = new EventEmitter;
+  @Output() nextItem = new EventEmitter;
+  @Output() prevItem = new EventEmitter;
 
   showComments = false;
 
   faHeart = faHeart;
+  arrowLeft = faArrowLeft;
+  arrowRight = faArrowRight;
 
   constructor(private service: GalleryService) { }
 
