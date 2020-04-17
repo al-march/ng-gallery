@@ -8,6 +8,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
 import { LiteboxComponent } from './litebox/litebox.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,10 @@ import { LiteboxComponent } from './litebox/litebox.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    FontAwesomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
