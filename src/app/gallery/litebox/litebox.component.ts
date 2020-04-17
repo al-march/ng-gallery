@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { GalleryItem } from '@app/gallery/gallery';
 
-import { faHeart, faArrowLeft, faArrowRight, faComments } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faArrowLeft, faArrowRight, faComments, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { GalleryService } from '@app/gallery/gallery.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class LiteboxComponent implements OnInit {
   faComments = faComments;
   arrowLeft = faArrowLeft;
   arrowRight = faArrowRight;
+  faTimes = faTimes;
 
   constructor(private service: GalleryService) { }
 
