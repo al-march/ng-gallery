@@ -1,0 +1,36 @@
+@import "vars";
+.menu {
+    margin: 0;
+    padding: 0;
+    &__nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        height: 40px;
+        @include flex(row, center);
+    }
+    &__btn {
+        border: none;
+        background-color: #fff;
+        height: inherit;
+        padding: 0 35px;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        transition: 0.4s ease all;
+        cursor: pointer;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        outline: none;
+        &:hover {
+            background-color: $accent;
+        }
+        &.active {
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+            background-color: $accent;
+            border: 1px solid transparent;
+        }
+    }
+}
