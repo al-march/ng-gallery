@@ -1,10 +1,11 @@
 @import 'vars';
 
 body {
-    background: $gradient;
     margin: 0;
-    padding: 0;
+    padding: 20px 0;
+    background-color: #f9f9ff;
     min-height: 100vh;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -12,6 +13,6 @@ h1, h2, h3, h4 {
     font-weight: normal;
 }
 
-input, textarea {
+input, textarea, button {
     font-family: inherit;
 }
