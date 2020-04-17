@@ -9,14 +9,24 @@ import { GALLERY_ITEMS } from '@app/mock';
 })
 export class GalleryComponent implements OnInit {
 
-  items: number[] = [1, 1, 1, 1]
+  showLitebox: boolean = false;
+  currentImg;
 
   galleryItems = GALLERY_ITEMS;
+
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
+
+
+  toggleLitebox = () => this.showLitebox = !this.showLitebox;
+
+  openLitebox(galleryItem) {
+    this.currentImg = galleryItem;
+    this.showLitebox = true
+  }
+
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-litebox',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./litebox.component.scss']
 })
 export class LiteboxComponent implements OnInit {
+
+  @Input() item;
+  @Output() close = new EventEmitter;
 
   constructor() { }
 

@@ -1,5 +1,8 @@
 <div class="gallery">
     <div class="gallery__grid">
-        <app-gallery-item *ngFor="let item of galleryItems" [item]="item"></app-gallery-item>
+        <app-gallery-item *ngFor="let item of galleryItems" [item]="item" (click)="openLitebox(item)"></app-gallery-item>
     </div>
 </div>
+
+
+<app-litebox *ngIf="showLitebox" [item]="currentImg" (close)="toggleLitebox()"></app-litebox>

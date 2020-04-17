@@ -31,7 +31,8 @@ $gutter: 2rem;
                 opacity: 0.8;
             }
             .gallery__title {
-                transform: translateY(0)
+                bottom: 50%;
+                transform: translateY(50%);
             }
         }
     }
@@ -40,14 +41,12 @@ $gutter: 2rem;
         position: absolute;
         left: 0;
         right: 0;
-        top: 0;
-        bottom: 0;
         text-align: center;
         color: #fff;
         font-weight: 500;
         transition: inherit;
         @include flex(row, center, center);
-        transform: translateY(50%)
+        bottom: 20px;
     }
 
     &__img {
