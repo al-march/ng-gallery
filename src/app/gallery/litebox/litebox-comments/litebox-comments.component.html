@@ -1,0 +1,25 @@
+<div class="litebox__content" [ngClass]="{show: showComments}">
+    <button class="litebox__hide-comments" type="button" (click)="showComments = false">
+        <fa-icon [icon]="faChevronDown"></fa-icon>
+    </button>
+
+    <ng-container *ngIf="!comments.length; else commentsBox">
+        <p class="litebox__no-comments">
+            There are no comments yet...
+        </p>
+    </ng-container>
+
+    <ng-template #commentsBox>
+        <div class="litebox__comment" *ngFor="let comment of comments">
+            <h3 class="autor">{{comment.autor}}</h3>
+            <p class="comment">{{comment.value}}</p>
+        </div>
+    </ng-template>
+
+    <form class="form">
+        <h5 class="form__title">Let your comment</h5>
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Comment" required>
+        <button type="submit">Send</button>
+    </form>
+</div>

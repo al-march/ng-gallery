@@ -23,12 +23,11 @@ export class LiteboxComponent implements OnInit {
   arrowLeft = faArrowLeft;
   arrowRight = faArrowRight;
   faTimes = faTimes;
-  faChevronDown = faChevronDown;
+
 
   constructor(private service: GalleryService) { }
 
   ngOnInit(): void {
-    console.log(this.item);
     
   }
 

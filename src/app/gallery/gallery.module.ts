@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryComponent } from './gallery.component';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { LiteboxComponent } from './litebox/litebox.component';
+import { LiteboxCommentsComponent } from './litebox/litebox-comments/litebox-comments.component';
 
 
 
@@ -15,6 +16,7 @@ import { LiteboxComponent } from './litebox/litebox.component';
     GalleryComponent,
     GalleryItemComponent,
     LiteboxComponent,
+    LiteboxCommentsComponent,
   ],
   imports: [
     CommonModule,
