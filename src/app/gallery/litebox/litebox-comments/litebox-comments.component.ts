@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Comment } from '@app/gallery/gallery';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -14,6 +14,8 @@ export class LiteboxCommentsComponent implements OnInit {
   @Input() id: number;
   @Input() comments: Comment[];
   @Input() showComments: boolean;
+
+  @Output() closeComments = new EventEmitter
 
   form: FormGroup;
 

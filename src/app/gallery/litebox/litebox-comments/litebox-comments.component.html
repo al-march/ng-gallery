@@ -1,5 +1,5 @@
 <div class="litebox__content" [ngClass]="{show: showComments}">
-    <button class="litebox__hide-comments" type="button" (click)="showComments = false">
+    <button class="litebox__hide-comments" type="button" (click)="closeComments.emit()">
         <fa-icon [icon]="faChevronDown"></fa-icon>
     </button>
 

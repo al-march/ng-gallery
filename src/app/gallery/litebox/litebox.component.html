@@ -23,7 +23,8 @@
         <app-litebox-comments
             [id]="item.id"
             [comments]="item.comments" 
-            [showComments]="showComments">
+            [showComments]="showComments"
+            (closeComments)="toggleComments()">
         </app-litebox-comments>
 
         <div class="litebox__control">
