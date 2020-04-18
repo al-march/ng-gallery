@@ -44,4 +44,14 @@ export class LiteboxComponent implements OnInit {
 
   showCommentsIcon = () => this.item.comments.length;
 
+  next() {
+    this.showComments = false;
+    this.nextItem.emit()
+  }
+
+  prev() {
+    this.showComments = false;
+    this.prevItem.emit()
+  }
+
 }
