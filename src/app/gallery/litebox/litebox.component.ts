@@ -1,8 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { GalleryItem } from '@app/gallery/gallery';
 
-import { faHeart, faArrowLeft, faArrowRight, faComments, faTimes, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faArrowLeft, faArrowRight, faComments, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { GalleryService } from '@app/gallery/gallery.service';
+
+export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37,
+  ESC = 27,
+}
 
 @Component({
   selector: 'app-litebox',
@@ -52,6 +58,23 @@ export class LiteboxComponent implements OnInit {
   prev() {
     this.showComments = false;
     this.prevItem.emit()
+  }
+
+
+  @HostListener('window:keyup', ['$event'])
+
+  keyEvent(event: KeyboardEvent) {
+    const { keyCode } = event;
+
+    if (keyCode === KEY_CODE.RIGHT_ARROW) {
+      this.next()
+    }
+    if (keyCode === KEY_CODE.LEFT_ARROW) {
+      this.prev();
+    }
+    if (keyCode === KEY_CODE.ESC) {
+      this.closeLitebox.emit();
+    }
   }
 
 }
