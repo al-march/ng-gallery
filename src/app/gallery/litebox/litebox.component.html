@@ -20,16 +20,17 @@
             <button class="litebox__show-comments" (click)="toggleComments()">Show Comments</button>
         </div>
 
-        <app-litebox-comments 
+        <app-litebox-comments
+            [id]="item.id"
             [comments]="item.comments" 
             [showComments]="showComments">
         </app-litebox-comments>
 
         <div class="litebox__control">
-            <button type="button" class="litebox__btn left" (click)="prevItem.emit()">
+            <button type="button" class="litebox__btn left" (click)="prev()">
                 <fa-icon [icon]="arrowLeft"></fa-icon>
             </button>
-            <button type="button" class="litebox__btn right" (click)="nextItem.emit()">
+            <button type="button" class="litebox__btn right" (click)="next()">
                 <fa-icon [icon]="arrowRight"></fa-icon>
             </button>
         </div>

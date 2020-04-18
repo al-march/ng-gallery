@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GalleryItem } from './gallery';
+import { GalleryItem, Comment } from './gallery';
 
 import { GALLERY_ITEMS } from '../mock';
 import { ReplaySubject, Subject, Observable, of } from 'rxjs';
@@ -25,6 +25,12 @@ export class GalleryService {
     this.gallery[likedIndex].isLiked = !this.gallery[likedIndex].isLiked;
 
     this.gallery[likedIndex].likes += this.gallery[likedIndex].isLiked ? 1 : -1;
+    this.saveState()
+  }
+
+  setComment(id, comment: Comment) {
+    const index = this.gallery.findIndex(item => item.id === id);
+    this.gallery[index].comments.push(comment);
     this.saveState()
   }
 
