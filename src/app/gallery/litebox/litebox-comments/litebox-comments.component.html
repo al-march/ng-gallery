@@ -18,8 +18,8 @@
 
     <form class="form" [formGroup]="form" (submit)="onSubmit()">
         <h5 class="form__title">Let your comment</h5>
-        <input type="text" placeholder="Your Name" required="" formControlName="autor">
+        <input type="text" placeholder="Your Name" required formControlName="autor">
         <input type="text" placeholder="Your Comment" required formControlName="value">
-        <button type="submit">Send</button>
+        <button [disabled]="!form.valid" type="submit">Send</button>
     </form>
 </div>
