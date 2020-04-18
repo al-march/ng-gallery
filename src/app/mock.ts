@@ -3,7 +3,7 @@ import { GalleryItem } from './gallery/gallery';
 export const GALLERY_ITEMS: GalleryItem[] = [
     {
         id: 1,
-        title: 'Spreading Peace to world',
+        title: 'Spreading',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-1.jpg',
         likes: 52,
         isLiked: false,
@@ -15,7 +15,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 2,
-        title: 'Spreading Peace to world',
+        title: 'Spreading',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-2.jpg',
         likes: 76,
         isLiked: false,
@@ -25,7 +25,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 3,
-        title: 'Spreading Peace to world',
+        title: 'Spreading',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-3.jpg',
         likes: 36,
         isLiked: false,
@@ -35,7 +35,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 4,
-        title: 'Spreading Peace to world',
+        title: 'Word',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-4.jpg',
         likes: 65,
         isLiked: false,
@@ -45,7 +45,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 5,
-        title: 'Spreading Peace to world',
+        title: 'Gardemann',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-5.jpg',
         likes: 267,
         isLiked: false,
@@ -55,7 +55,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 6,
-        title: 'Spreading Peace to world',
+        title: 'Dream',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-6.jpg',
         likes: 45,
         isLiked: false,
@@ -65,7 +65,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 7,
-        title: 'Spreading Peace to world',
+        title: 'Peace to world',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-7.jpg',
         likes: 87,
         isLiked: false,
@@ -75,7 +75,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 8,
-        title: 'Spreading Peace to world',
+        title: 'To Honor',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-8.jpg',
         likes: 234,
         isLiked: false,
@@ -85,7 +85,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 9,
-        title: 'Spreading Peace to world',
+        title: 'King of lamark',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-9.jpg',
         likes: 86,
         isLiked: false,
@@ -93,7 +93,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 10,
-        title: 'Spreading Peace to world',
+        title: 'Fision',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-10.jpg',
         likes: 657,
         isLiked: false,
@@ -101,7 +101,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 11,
-        title: 'Spreading Peace to world',
+        title: 'Drag',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-11.jpg',
         likes: 567,
         isLiked: false,
@@ -111,7 +111,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: 12,
-        title: 'Spreading Peace to world',
+        title: 'Drop',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-12.jpg',
         likes: 234,
         isLiked: false,

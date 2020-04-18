@@ -12,6 +12,7 @@ import { GalleryService } from '@app/gallery/gallery.service';
 export class LiteboxCommentsComponent implements OnInit {
 
   @Input() id: number;
+  @Input() title: string;
   @Input() comments: Comment[];
   @Input() showComments: boolean;
 

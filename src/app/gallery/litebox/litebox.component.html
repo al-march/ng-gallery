@@ -2,13 +2,15 @@
     <button type="button" class="litebox__close" (click)="closeLitebox.emit()">
         <fa-icon [icon]="faTimes"></fa-icon>
     </button>
+    
     <div class="litebox__wrapper">
 
         <img class="litebox__img" [src]="item.src" alt="" (click)="showComments = false">
 
         <div class="litebox__info">
             <div class="litebox__info-item">
-                <fa-icon class="litebox__icon-like liked" [ngClass]="{liked: item.isLiked}" [icon]="faHeart" (click)="toggleLike()"></fa-icon>
+                <fa-icon class="litebox__icon-like liked" [ngClass]="{liked: item.isLiked}" [icon]="faHeart"
+                    (click)="toggleLike()"></fa-icon>
                 <span>{{item.likes}}</span>
             </div>
 
@@ -20,21 +22,17 @@
             <button class="litebox__show-comments" (click)="toggleComments()">Show Comments</button>
         </div>
 
-        <app-litebox-comments
-            [id]="item.id"
-            [comments]="item.comments" 
-            [showComments]="showComments"
-            (closeComments)="toggleComments()">
+        <app-litebox-comments [id]="item.id" [title]="item.title" [comments]="item.comments"
+            [showComments]="showComments" (closeComments)="toggleComments()">
         </app-litebox-comments>
+    </div>
 
-        <div class="litebox__control">
-            <button type="button" class="litebox__btn left" (click)="prev()">
-                <fa-icon [icon]="arrowLeft"></fa-icon>
-            </button>
-            <button type="button" class="litebox__btn right" (click)="next()">
-                <fa-icon [icon]="arrowRight"></fa-icon>
-            </button>
-        </div>
-
+    <div class="litebox__control">
+        <button type="button" class="litebox__btn left" (click)="prev()">
+            <fa-icon [icon]="arrowLeft"></fa-icon>
+        </button>
+        <button type="button" class="litebox__btn right" (click)="next()">
+            <fa-icon [icon]="arrowRight"></fa-icon>
+        </button>
     </div>
 </div>

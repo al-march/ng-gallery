@@ -3,6 +3,8 @@
         <fa-icon [icon]="faChevronDown"></fa-icon>
     </button>
 
+    <h5 class="litebox__item-title">{{title}}</h5>
+
     <ng-container *ngIf="!comments.length; else commentsBox">
         <p class="litebox__no-comments">
             There are no comments yet...
