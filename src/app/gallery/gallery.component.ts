@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GalleryItem } from '@app/gallery/gallery';
 import { GalleryService } from '@app/gallery/gallery.service';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { GalleryService } from '@app/gallery/gallery.service';
 export class GalleryComponent implements OnInit {
 
   public showLitebox: boolean = false;
+  private subscription: Subscription;
 
   public galleryItems: GalleryItem[];;
   public currentItem: GalleryItem;
@@ -19,7 +21,7 @@ export class GalleryComponent implements OnInit {
   constructor(private service: GalleryService) { }
 
   ngOnInit(): void {
-    this.service.getGallery().subscribe(gallery => this.galleryItems = gallery)
+    this.subscription = this.service.getGallery().subscribe(gallery => this.galleryItems = gallery)
   }
 
   public toggleLitebox = () => this.showLitebox = !this.showLitebox;
@@ -45,6 +47,10 @@ export class GalleryComponent implements OnInit {
     this.currentItem = (currentIndex === 0)
       ? this.galleryItems[length - 1]
       : this.galleryItems[currentIndex - 1]
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe()
   }
 
 }
