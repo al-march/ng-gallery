@@ -10,8 +10,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 export class LiteboxCommentsComponent implements OnInit {
 
   @Input() comments: Comment[];
-
-  showComments = false;
+  @Input() showComments: boolean;
 
   faChevronDown = faChevronDown;
 

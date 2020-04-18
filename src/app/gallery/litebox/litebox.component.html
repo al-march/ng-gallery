@@ -17,10 +17,13 @@
                 <span>{{item.comments.length}}</span>
             </div>
 
-            <button class="litebox__show-comments" (click)="showComments = true">Show Comments</button>
+            <button class="litebox__show-comments" (click)="toggleComments()">Show Comments</button>
         </div>
 
-        <app-litebox-comments [comments]="item.comments"></app-litebox-comments>
+        <app-litebox-comments 
+            [comments]="item.comments" 
+            [showComments]="showComments">
+        </app-litebox-comments>
 
         <div class="litebox__control">
             <button type="button" class="litebox__btn left" (click)="prevItem.emit()">

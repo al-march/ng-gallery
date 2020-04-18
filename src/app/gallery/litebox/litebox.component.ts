@@ -40,6 +40,8 @@ export class LiteboxComponent implements OnInit {
 
   toggleLike = () => this.service.toggleLike(this.item.id);
 
+  toggleComments = () => this.showComments = !this.showComments;
+
   showCommentsIcon = () => this.item.comments.length;
 
 }
