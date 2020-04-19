@@ -30,6 +30,7 @@ $gutter: 2rem;
         cursor: pointer;
         transition: .4s ease all;
         overflow: hidden;
+        animation: showIn 0.5s;
         &:before {
             content: '';
             position: absolute;
@@ -87,3 +88,15 @@ $gutter: 2rem;
         width: 100%;
     }
 }
+
+
+@keyframes showIn {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

@@ -1,6 +1,8 @@
 <div class="gallery">
     <div class="gallery__grid">
-        <app-gallery-item *ngFor="let item of galleryItems" [item]="item" (click)="openLitebox(item)"></app-gallery-item>
+        <ng-container *ngFor="let item of galleryItems">
+            <app-gallery-item *ngIf="isShowItem(item, filter)" [item]="item" (click)="openLitebox(item)"></app-gallery-item>
+        </ng-container>
     </div>
 </div>
 

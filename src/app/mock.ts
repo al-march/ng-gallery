@@ -6,6 +6,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Spreading',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-1.jpg',
         likes: 52,
+        filters: ['filter2'],
         isLiked: false,
         comments: [
             { autor: 'Magomed', value: 'Very Buetiful' },
@@ -18,7 +19,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Spreading',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-2.jpg',
         likes: 76,
-        isLiked: false,
+        filters: ['filter2', 'filter3'],
+        isLiked: true,
         comments: [
             { autor: 'Liticula', value: 'This is my favorite' }
         ]
@@ -28,6 +30,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Spreading',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-3.jpg',
         likes: 36,
+        filters: ['filter2'],
         isLiked: false,
         comments: [
             { autor: 'Luiza', value: 'Very Buetiful' }
@@ -38,7 +41,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Word',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-4.jpg',
         likes: 65,
-        isLiked: false,
+        filters: ['filter3'],
+        isLiked: true,
         comments: [
             { autor: 'Dasha', value: 'Very Buetiful' }
         ]
@@ -48,6 +52,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Gardemann',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-5.jpg',
         likes: 267,
+        filters: ['filter1', 'filter2'],
         isLiked: false,
         comments: [
             { autor: 'Alexandr', value: 'Very Buetiful' }
@@ -58,6 +63,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Dream',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-6.jpg',
         likes: 45,
+        filters: ['filter3', 'filter2'],
         isLiked: false,
         comments: [
             { autor: 'Denis', value: 'Very Buetiful' }
@@ -68,6 +74,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Peace to world',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-7.jpg',
         likes: 87,
+        filters: ['filter3'],
         isLiked: false,
         comments: [
             { autor: 'Sereja', value: 'Very Buetiful' }
@@ -78,6 +85,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'To Honor',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-8.jpg',
         likes: 234,
+        filters: ['filter2'],
         isLiked: false,
         comments: [
             { autor: 'Dracula', value: 'Very Buetiful' }
@@ -88,6 +96,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'King of lamark',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-9.jpg',
         likes: 86,
+        filters: ['filter1', 'filter3'],
         isLiked: false,
         comments: []
     },
@@ -96,6 +105,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Fision',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-10.jpg',
         likes: 657,
+        filters: ['filter2', 'filter3'],
         isLiked: false,
         comments: []
     },
@@ -104,6 +114,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Drag',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-11.jpg',
         likes: 567,
+        filters: [''],
         isLiked: false,
         comments: [
             { autor: 'Someone', value: 'Very Buetiful' }
@@ -114,6 +125,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Drop',
         src: 'https://colorlib.com/preview/theme/bitmap/img/gallery/gallery-12.jpg',
         likes: 234,
+        filters: [''],
         isLiked: false,
         comments: [
             { autor: 'Nikto', value: 'Very Buetiful' }

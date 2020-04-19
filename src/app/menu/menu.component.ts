@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GalleryService } from '@app/gallery/gallery.service';
+import { FilterService } from './filter.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  filter: string = 'all';
+
+  constructor(private filterService: FilterService) { }
 
   ngOnInit(): void {
   }
+
+  changeFilter(filter) {
+    this.filter = filter;
+    this.filterService.filterSubj.next(filter);
+  }
+
+
 
 }

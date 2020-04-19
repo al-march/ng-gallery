@@ -1,8 +1,8 @@
 <menu class="menu">
     <nav class="menu__nav">
-        <button class="menu__btn active">All</button>
-        <button class="menu__btn">Filter1</button>
-        <button class="menu__btn">Filter2</button>
-        <button class="menu__btn">Filter3</button>
+        <button class="menu__btn" [ngClass]="{active: filter === 'all'}"     (click)="changeFilter('all')">All</button>
+        <button class="menu__btn" [ngClass]="{active: filter === 'filter1'}" (click)="changeFilter('filter1')">Filter1</button>
+        <button class="menu__btn" [ngClass]="{active: filter === 'filter2'}" (click)="changeFilter('filter2')">Filter2</button>
+        <button class="menu__btn" [ngClass]="{active: filter === 'filter3'}" (click)="changeFilter('filter3')">Filter3</button>
     </nav>
 </menu>

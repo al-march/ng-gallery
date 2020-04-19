@@ -17,7 +17,7 @@ export class GalleryService {
 
   getGallery(): Observable<GalleryItem[]> {
     this.saveState();
-    return this.gallerySubject
+    return this.gallerySubject;
   }
 
   toggleLike(id) {
@@ -25,16 +25,17 @@ export class GalleryService {
     this.gallery[likedIndex].isLiked = !this.gallery[likedIndex].isLiked;
 
     this.gallery[likedIndex].likes += this.gallery[likedIndex].isLiked ? 1 : -1;
-    this.saveState()
+    this.saveState();
   }
 
   setComment(id, comment: Comment) {
     const index = this.gallery.findIndex(item => item.id === id);
     this.gallery[index].comments.push(comment);
-    this.saveState()
+    this.saveState();
   }
 
   saveState() {
-    this.gallerySubject.next(this.gallery)
+    this.gallerySubject.next(this.gallery);
   }
+
 }

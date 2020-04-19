@@ -5,6 +5,7 @@ export interface GalleryItem {
     likes: number;
     isLiked: boolean;
     comments: Comment[];
+    filters: string[];
 }
 
 export interface Comment {

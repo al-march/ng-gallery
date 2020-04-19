@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GalleryItem } from '@app/gallery/gallery';
 import { GalleryService } from '@app/gallery/gallery.service';
-import { Subscription } from 'rxjs';
+import { Subscription, ReplaySubject } from 'rxjs';
+import { FilterService } from '@app/menu/filter.service';
 
 
 @Component({
@@ -9,19 +10,28 @@ import { Subscription } from 'rxjs';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
+
+
 export class GalleryComponent implements OnInit {
 
   public showLitebox: boolean = false;
-  private subscription: Subscription;
 
-  public galleryItems: GalleryItem[];;
+  private subscription: Subscription;
+  private filterSubscriber: Subscription;
+
+  public galleryItems: GalleryItem[];
   public currentItem: GalleryItem;
 
+  public filter: string = 'all';
 
-  constructor(private service: GalleryService) { }
+  constructor(private service: GalleryService, private filterService: FilterService) { }
 
   ngOnInit(): void {
-    this.subscription = this.service.getGallery().subscribe(gallery => this.galleryItems = gallery)
+    this.subscription = this.service.getGallery().subscribe(gallery => {
+      this.galleryItems = gallery;
+    });
+
+    this.filterSubscriber = this.filterService.filterSubj.subscribe(filter => this.filter = filter)
   }
 
   public toggleLitebox = () => this.showLitebox = !this.showLitebox;
@@ -50,7 +60,10 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe()
+    this.subscription.unsubscribe();
+    this.filterSubscriber.unsubscribe();
   }
+
+  isShowItem = (item: GalleryItem, filter) => filter === 'all' ? true : item.filters.includes(filter);
 
 }
